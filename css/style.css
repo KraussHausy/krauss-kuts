@@ -122,6 +122,14 @@ ul { list-style: none; }
   font-weight: 600;
   font-size: 1.35rem;
   letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav__logo-icon {
+  width: 32px;
+  height: 32px;
 }
 
 .nav__links {
@@ -166,6 +174,12 @@ ul { list-style: none; }
   padding: 6rem var(--space) 4rem;
 }
 
+.hero__logo {
+  width: 160px;
+  margin: 0 auto 1.5rem;
+  display: block;
+}
+
 .hero__tag {
   font-weight: 500;
   font-size: 0.75rem;
@@ -205,15 +219,11 @@ ul { list-style: none; }
   align-items: center;
 }
 
-.about__logo {
-  width: 220px;
-  margin: 0 auto 2rem;
-  display: block;
-}
-
 .about__action-img {
   width: 100%;
   border-radius: 8px;
+  object-fit: cover;
+  max-height: 500px;
 }
 
 .about__text h2 {
@@ -249,10 +259,43 @@ ul { list-style: none; }
   transition: box-shadow 0.25s, transform 0.25s;
   background: var(--clr-bg);
   position: relative;
+  cursor: default;
+  overflow: hidden;
 }
 .card:hover {
   box-shadow: 0 8px 30px rgba(0,0,0,0.06);
   transform: translateY(-3px);
+}
+
+.card__tooltip {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 26, 0.95);
+  color: #fff;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  border-radius: 8px;
+}
+.card:hover .card__tooltip {
+  opacity: 1;
+  pointer-events: auto;
+}
+.card__tooltip p {
+  color: #ccc;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+.card__tooltip-cta {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--clr-accent-light);
+  letter-spacing: 0.03em;
 }
 
 .card__icon {
@@ -292,13 +335,6 @@ ul { list-style: none; }
   letter-spacing: 0.04em;
 }
 
-.card__sku {
-  display: block;
-  margin-top: 0.75rem;
-  font-size: 0.7rem;
-  color: var(--clr-accent-light);
-  letter-spacing: 0.05em;
-}
 
 /* ===== SHOP / PRODUCTS ===== */
 .shop {

@@ -3,50 +3,33 @@
   <circle cx="200" cy="200" r="190" stroke="#2C2C2C" stroke-width="3" fill="none"/>
   <circle cx="200" cy="200" r="170" stroke="#8B6F4E" stroke-width="1" fill="none"/>
 
-  <!-- Scissor-K Monogram -->
-  <g transform="translate(200, 190)">
-
-    <!-- First K (scissor) -->
-    <g transform="translate(-60, 0)">
-      <!-- Vertical stem -->
-      <rect x="0" y="-45" width="7" height="90" fill="#2C2C2C"/>
-      <!-- Upper blade -->
-      <polygon points="7,-8 48,-42 58,-42 18,-3" fill="#2C2C2C"/>
-      <!-- Upper finger hole -->
-      <circle cx="58" cy="-42" r="9" stroke="#2C2C2C" stroke-width="3" fill="none"/>
-      <!-- Lower blade -->
-      <polygon points="7,8 48,42 58,42 18,3" fill="#2C2C2C"/>
-      <!-- Lower finger hole -->
-      <circle cx="58" cy="42" r="9" stroke="#2C2C2C" stroke-width="3" fill="none"/>
-      <!-- Pivot point -->
-      <circle cx="7" cy="0" r="3.5" fill="#8B6F4E"/>
-    </g>
-
-    <!-- Second K (scissor) -->
-    <g transform="translate(12, 0)">
-      <!-- Vertical stem -->
-      <rect x="0" y="-45" width="7" height="90" fill="#2C2C2C"/>
-      <!-- Upper blade -->
-      <polygon points="7,-8 48,-42 58,-42 18,-3" fill="#2C2C2C"/>
-      <!-- Upper finger hole -->
-      <circle cx="58" cy="-42" r="9" stroke="#2C2C2C" stroke-width="3" fill="none"/>
-      <!-- Lower blade -->
-      <polygon points="7,8 48,42 58,42 18,3" fill="#2C2C2C"/>
-      <!-- Lower finger hole -->
-      <circle cx="58" cy="42" r="9" stroke="#2C2C2C" stroke-width="3" fill="none"/>
-      <!-- Pivot point -->
-      <circle cx="7" cy="0" r="3.5" fill="#8B6F4E"/>
-    </g>
-
+  <!-- Scissors icon at top -->
+  <g transform="translate(200, 85)" stroke="#8B6F4E" stroke-width="2.5" fill="none" stroke-linecap="round">
+    <line x1="-18" y1="20" x2="8" y2="-20"/>
+    <circle cx="-22" cy="26" r="8"/>
+    <line x1="18" y1="20" x2="-8" y2="-20"/>
+    <circle cx="22" cy="26" r="8"/>
   </g>
 
-  <!-- "KRAUSS KUTS" text arc — pushed lower for clearance -->
+  <!-- KK Monogram -->
+  <g transform="translate(200, 210)" fill="#2C2C2C">
+    <g transform="translate(-62, 0)">
+      <rect x="0" y="-45" width="8" height="90"/>
+      <polygon points="8,-10 50,-45 62,-45 20,-5 62,45 50,45 8,10"/>
+    </g>
+    <g transform="translate(10, 0)">
+      <rect x="0" y="-45" width="8" height="90"/>
+      <polygon points="8,-10 50,-45 62,-45 20,-5 62,45 50,45 8,10"/>
+    </g>
+  </g>
+
+  <!-- "KRAUSS KUTS" text arc -->
   <path id="bottomArc" d="M 55,330 A 175,175 0 0,0 345,330" fill="none"/>
   <text font-family="'Inter', sans-serif" font-size="13" font-weight="500" letter-spacing="6" fill="#8B6F4E">
     <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">KRAUSS KUTS</textPath>
   </text>
 
-  <!-- "SELF-CARE STUDIO" text arc — more clearance from inner circle -->
+  <!-- "SELF-CARE STUDIO" text arc -->
   <path id="bottomArc2" d="M 70,355 A 160,160 0 0,0 330,355" fill="none"/>
   <text font-family="'Inter', sans-serif" font-size="9" font-weight="300" letter-spacing="4" fill="#7A7A7A">
     <textPath href="#bottomArc2" startOffset="50%" text-anchor="middle">SELF-CARE STUDIO</textPath>
