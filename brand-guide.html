@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krauss Kuts — Brand Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --cream:    #FAF7F2;
+      --sand:     #E8E0D4;
+      --gold:     #8B6F4E;
+      --gold-lt:  #C9B99A;
+      --charcoal: #2C2C2C;
+      --dark:     #1A1A1A;
+      --muted:    #7A7A7A;
+      --border:   #E5DDD3;
+      --white:    #FFFFFF;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      color: var(--charcoal);
+      background: var(--cream);
+      line-height: 1.7;
+    }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 0 2rem; }
+
+    /* Header */
+    .bg-header {
+      background: var(--dark);
+      color: var(--white);
+      padding: 4rem 0;
+      text-align: center;
+    }
+    .bg-header img { width: 160px; margin: 0 auto 2rem; }
+    .bg-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .bg-header p { color: var(--gold-lt); font-size: 0.9rem; letter-spacing: 0.1em; }
+
+    /* Sections */
+    .section { padding: 4rem 0; border-bottom: 1px solid var(--border); }
+    .section:last-child { border-bottom: none; }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    .section-intro { color: var(--muted); margin-bottom: 2rem; font-size: 0.95rem; }
+
+    /* Logo section */
+    .logo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .logo-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+    }
+    .logo-card.dark { background: var(--dark); }
+    .logo-card img { max-width: 140px; margin: 0 auto 1rem; }
+    .logo-card p { font-size: 0.8rem; color: var(--muted); }
+    .logo-card.dark p { color: var(--gold-lt); }
+
+    /* Colors */
+    .color-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    .color-swatch {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .color-swatch__block {
+      height: 100px;
+      display: flex;
+      align-items: flex-end;
+      padding: 0.75rem;
+    }
+    .color-swatch__info {
+      padding: 0.75rem;
+      background: var(--white);
+    }
+    .color-swatch__name { font-weight: 500; font-size: 0.85rem; }
+    .color-swatch__hex { font-size: 0.75rem; color: var(--muted); font-family: monospace; }
+    .color-swatch__use { font-size: 0.75rem; color: var(--muted); margin-top: 0.25rem; }
+
+    /* Typography */
+    .type-sample {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 1rem;
+      background: var(--white);
+    }
+    .type-sample__label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+    .type-display {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 2.5rem;
+      line-height: 1.15;
+    }
+    .type-body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+    .type-ui {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 0.85rem;
+      letter-spacing: 0.05em;
+    }
+    .type-meta { font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; }
+
+    /* Tone */
+    .tone-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .tone-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      background: var(--white);
+    }
+    .tone-card h4 {
+      font-weight: 500;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+    .tone-card p { font-size: 0.88rem; color: var(--muted); }
+    .tone-do { border-left: 3px solid var(--gold); }
+    .tone-dont { border-left: 3px solid #ccc; }
+
+    /* Products */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    .product-card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--white);
+    }
+    .product-card img { width: 100%; }
+    .product-card__info { padding: 1rem; }
+    .product-card__info h4 { font-size: 0.85rem; font-weight: 500; margin-bottom: 0.25rem; }
+    .product-card__info p { font-size: 0.75rem; color: var(--muted); font-family: monospace; }
+
+    /* Rules */
+    .rules-list { list-style: none; }
+    .rules-list li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+      display: flex;
+      gap: 0.75rem;
+    }
+    .rules-list li:last-child { border-bottom: none; }
+    .rule-icon { flex-shrink: 0; font-size: 1rem; }
+
+    @media (max-width: 768px) {
+      .logo-grid { grid-template-columns: 1fr; }
+      .tone-grid { grid-template-columns: 1fr; }
+      .product-grid { grid-template-columns: 1fr 1fr; }
+      .color-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="bg-header">
+    <div class="container">
+      <img src="images/logo.svg" alt="Krauss Kuts logo">
+      <h1>Brand Guide</h1>
+      <p>KRAUSS KUTS &mdash; SELF-CARE STUDIO</p>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <!-- 1. BRAND OVERVIEW -->
+    <div class="section">
+      <h2 class="section-title">Brand Overview</h2>
+      <p class="section-intro">Krauss Kuts is a modern self-care studio for people who take grooming seriously without taking themselves too seriously. We're confident, warm, and detail-obsessed.</p>
+
+      <div class="tone-grid">
+        <div class="tone-card">
+          <h4>Mission</h4>
+          <p>To make self-care a daily ritual, not a special occasion. Every visit should feel like a reset — sharp, intentional, and worth your time.</p>
+        </div>
+        <div class="tone-card">
+          <h4>Audience</h4>
+          <p>Style-conscious adults (25–45) who value quality over convenience. They care about what goes on their body and how they show up in the world.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. LOGO -->
+    <div class="section">
+      <h2 class="section-title">Logo</h2>
+      <p class="section-intro">The logo combines a KK monogram with a scissors motif — a nod to the craft. Use the full logo where space allows, the icon mark for tight spaces and favicons.</p>
+
+      <div class="logo-grid">
+        <div class="logo-card">
+          <img src="images/logo.svg" alt="Primary logo">
+          <p>Primary — Light background</p>
+        </div>
+        <div class="logo-card dark">
+          <img src="images/logo.svg" alt="Logo on dark" style="filter: invert(1) brightness(2);">
+          <p>Inverted — Dark background</p>
+        </div>
+        <div class="logo-card">
+          <img src="images/logo-icon.svg" alt="Icon mark" style="max-width: 80px;">
+          <p>Icon mark — Favicon, social</p>
+        </div>
+      </div>
+
+      <ul class="rules-list">
+        <li><span class="rule-icon">&#10003;</span> Minimum clear space around logo: equal to the height of one "K" in the monogram</li>
+        <li><span class="rule-icon">&#10003;</span> Minimum size: 32px (icon mark), 120px (full logo)</li>
+        <li><span class="rule-icon">&#10007;</span> Don't stretch, rotate, add drop shadows, or change the logo colors</li>
+        <li><span class="rule-icon">&#10007;</span> Don't place the logo on busy or low-contrast backgrounds</li>
+      </ul>
+    </div>
+
+    <!-- 3. COLOR PALETTE -->
+    <div class="section">
+      <h2 class="section-title">Color Palette</h2>
+      <p class="section-intro">Warm, grounded, and premium. The palette pairs rich neutrals with a signature gold accent.</p>
+
+      <div class="color-grid">
+        <div class="color-swatch">
+          <div class="color-swatch__block" style="background: #1A1A1A;">
+          </div>
+          <div class="color-swatch__info">
+            <div class="color-swatch__name">Noir</div>
+            <div class="color-swatch__hex">#1A1A1A</div>
+            <div class="color-swatch__use">Primary buttons, nav, footer</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-swatch__block" style="background: #2C2C2C;">
+          </div>
+          <div class="color-swatch__info">
+            <div class="color-swatch__name">Charcoal</div>
+            <div class="color-swatch__hex">#2C2C2C</div>
+            <div class="color-swatch__use">Body text, headings</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-swatch__block" style="background: #8B6F4E;">
+          </div>
+          <div class="color-swatch__info">
+            <div class="color-swatch__name">Brass</div>
+            <div class="color-swatch__hex">#8B6F4E</div>
+            <div class="color-swatch__use">Accent, tags, icons, hover</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-swatch__block" style="background: #C9B99A;">
+          </div>
+          <div class="color-swatch__info">
+            <div class="color-swatch__name">Sand</div>
+            <div class="color-swatch__hex">#C9B99A</div>
+            <div class="color-swatch__use">Secondary accent, SKUs, subtle text</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-swatch__block" style="background: #E8E0D4;">
+          </div>
+          <div class="color-swatch__info">
+            <div class="color-swatch__name">Linen</div>
+            <div class="color-swatch__hex">#E8E0D4</div>
+            <div class="color-swatch__use">Hero gradient, card backgrounds</div>
+          </div>
+        </div>
+        <div class="color-swatch">
+          <div class="color-swatch__block" style="background: #FAF7F2;">
+          </div>
+          <div class="color-swatch__info">
+            <div class="color-swatch__name">Cream</div>
+            <div class="color-swatch__hex">#FAF7F2</div>
+            <div class="color-swatch__use">Page background</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. TYPOGRAPHY -->
+    <div class="section">
+      <h2 class="section-title">Typography</h2>
+      <p class="section-intro">Two fonts: a serif for impact and a sans-serif for clarity. Never mix more than these two.</p>
+
+      <div class="type-sample">
+        <div class="type-sample__label">Display — Cormorant Garamond, Semibold</div>
+        <div class="type-display">Look Sharp, Feel Sharper.</div>
+        <div class="type-meta">Use for: hero headlines, section headings, service/product names. Sizes: 2rem – 5.5rem.</div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-sample__label">Body — Inter, Light (300)</div>
+        <div class="type-body">Krauss Kuts is a modern self-care studio where sharp cuts meet intentional grooming. We believe the chair is where confidence starts.</div>
+        <div class="type-meta">Use for: paragraphs, descriptions, long-form text. Size: 0.9rem – 1.15rem. Line-height: 1.7.</div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-sample__label">UI — Inter, Medium (500)</div>
+        <div class="type-ui">BOOK NOW &nbsp;&nbsp;|&nbsp;&nbsp; VIEW SERVICES &nbsp;&nbsp;|&nbsp;&nbsp; SUBSCRIBE</div>
+        <div class="type-meta">Use for: buttons, nav links, tags, labels. Size: 0.75rem – 0.85rem. Letter-spacing: 0.05em – 0.15em.</div>
+      </div>
+    </div>
+
+    <!-- 5. TONE OF VOICE -->
+    <div class="section">
+      <h2 class="section-title">Tone of Voice</h2>
+      <p class="section-intro">Confident, not cocky. Warm, not cheesy. We talk to people like a sharp friend who happens to be really good with scissors.</p>
+
+      <div class="tone-grid">
+        <div class="tone-card tone-do">
+          <h4>Do</h4>
+          <p>"Walk in wound up, walk out unwound."<br>"The same oil we use in the chair — now for your shelf."<br>"Keeps your beard looking intentional, not accidental."</p>
+        </div>
+        <div class="tone-card tone-dont">
+          <h4>Don't</h4>
+          <p>"We are committed to delivering best-in-class grooming solutions."<br>"Pamper yourself today!"<br>"Limited time offer!!!"</p>
+        </div>
+        <div class="tone-card tone-do">
+          <h4>Brand Adjectives</h4>
+          <p>Sharp &bull; Intentional &bull; Warm &bull; Grounded &bull; Modern-classic &bull; Detail-obsessed</p>
+        </div>
+        <div class="tone-card tone-dont">
+          <h4>Not These</h4>
+          <p>Luxury &bull; Exclusive &bull; Premium (overused) &bull; Pamper &bull; Treat yourself &bull; Bespoke</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. PRODUCT VISUALS -->
+    <div class="section">
+      <h2 class="section-title">Product Line</h2>
+      <p class="section-intro">Product illustrations follow the brand palette. Replace SVGs with photography when product shots are available — keep the warm, minimal aesthetic.</p>
+
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="images/product-pomade.svg" alt="Matte Clay Pomade">
+          <div class="product-card__info">
+            <h4>Matte Clay Pomade</h4>
+            <p>PROD-POMADE-001</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/product-beardoil.svg" alt="Cedarwood Beard Oil">
+          <div class="product-card__info">
+            <h4>Cedarwood Beard Oil</h4>
+            <p>PROD-BEARDOIL-001</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/product-shampoo.svg" alt="Daily Reset Shampoo">
+          <div class="product-card__info">
+            <h4>Daily Reset Shampoo</h4>
+            <p>PROD-SHAMPOO-001</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/product-aftershave.svg" alt="Cooling Aftershave Balm">
+          <div class="product-card__info">
+            <h4>Cooling Aftershave Balm</h4>
+            <p>PROD-AFTERSHAVE-001</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/product-scalp.svg" alt="Scalp Revival Serum">
+          <div class="product-card__info">
+            <h4>Scalp Revival Serum</h4>
+            <p>PROD-SCALP-001</p>
+          </div>
+        </div>
+        <div class="product-card">
+          <img src="images/product-candle.svg" alt="The Shop Candle">
+          <div class="product-card__info">
+            <h4>The Shop Candle</h4>
+            <p>PROD-CANDLE-001</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. IMAGERY -->
+    <div class="section">
+      <h2 class="section-title">Imagery Guidelines</h2>
+      <p class="section-intro">Photography should feel candid and warm — real moments in the chair, not stock-photo perfection.</p>
+
+      <img src="images/hero-action.svg" alt="Krauss Kuts experience" style="width:100%; border-radius: 8px; margin-bottom: 1.5rem;">
+
+      <div class="tone-grid">
+        <div class="tone-card tone-do">
+          <h4>Photography Do's</h4>
+          <p>Natural light or warm tungsten tones. Close-up details (hands cutting, product texture, lather). Candid expressions. Warm color grading that matches the brand palette.</p>
+        </div>
+        <div class="tone-card tone-dont">
+          <h4>Photography Don'ts</h4>
+          <p>Flash photography. Overly posed or stock-looking shots. Cool/blue color grading. Busy or cluttered backgrounds. Heavy filters or overlays.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. DIGITAL USAGE -->
+    <div class="section">
+      <h2 class="section-title">Digital Usage</h2>
+      <p class="section-intro">Rules for using the brand across web, social, and third-party embeds.</p>
+
+      <ul class="rules-list">
+        <li><span class="rule-icon">&#9758;</span> <strong>Favicon:</strong> Use the icon mark (logo-icon.svg) at 32x32px</li>
+        <li><span class="rule-icon">&#9758;</span> <strong>Social profile:</strong> Icon mark on Cream (#FAF7F2) background</li>
+        <li><span class="rule-icon">&#9758;</span> <strong>Email header:</strong> Full logo, max 200px wide, on white or cream</li>
+        <li><span class="rule-icon">&#9758;</span> <strong>Klaviyo popups:</strong> Match Cream background, Brass accent, Inter font</li>
+        <li><span class="rule-icon">&#9758;</span> <strong>Boulevard widget:</strong> Use custom CSS to align with brand palette where possible</li>
+        <li><span class="rule-icon">&#9758;</span> <strong>Buttons:</strong> Noir fill (#1A1A1A) with white text. Hover state: Brass (#8B6F4E)</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div style="background: var(--dark); color: var(--gold-lt); text-align: center; padding: 2rem; margin-top: 3rem; font-size: 0.8rem;">
+    Krauss Kuts Brand Guide &mdash; 2026. For internal use.
+  </div>
+
+</body>
+</html>

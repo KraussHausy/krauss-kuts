@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Compact icon mark — scissors + KK -->
+  <circle cx="60" cy="60" r="56" stroke="#2C2C2C" stroke-width="2.5" fill="none"/>
+  <circle cx="60" cy="60" r="50" stroke="#8B6F4E" stroke-width="0.75" fill="none"/>
+
+  <!-- Scissors -->
+  <g transform="translate(60, 24)" stroke="#8B6F4E" stroke-width="1.8" fill="none" stroke-linecap="round">
+    <line x1="-10" y1="12" x2="5" y2="-10"/>
+    <circle cx="-13" cy="16" r="5"/>
+    <line x1="10" y1="12" x2="-5" y2="-10"/>
+    <circle cx="13" cy="16" r="5"/>
+  </g>
+
+  <!-- KK small -->
+  <g transform="translate(60, 62)" fill="#2C2C2C">
+    <g transform="translate(-22, 0)">
+      <rect x="0" y="-16" width="3" height="32"/>
+      <polygon points="3,-4 18,-16 23,-16 8,-2 23,16 18,16 3,4"/>
+    </g>
+    <g transform="translate(2, 0)">
+      <rect x="0" y="-16" width="3" height="32"/>
+      <polygon points="3,-4 18,-16 23,-16 8,-2 23,16 18,16 3,4"/>
+    </g>
+  </g>
+</svg>

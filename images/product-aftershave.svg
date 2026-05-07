@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <rect width="200" height="200" fill="#E8E0D4" rx="8"/>
+  <!-- Tube body -->
+  <rect x="72" y="60" width="56" height="95" rx="28" fill="#2C2C2C"/>
+  <!-- Tube cap -->
+  <rect x="85" y="48" width="30" height="18" rx="4" fill="#8B6F4E"/>
+  <!-- Label area -->
+  <ellipse cx="100" cy="110" rx="22" ry="28" fill="none" stroke="#8B6F4E" stroke-width="1.2"/>
+  <text x="100" y="106" text-anchor="middle" font-family="sans-serif" font-size="5.5" font-weight="600" fill="#8B6F4E" letter-spacing="0.8">COOLING</text>
+  <text x="100" y="115" text-anchor="middle" font-family="sans-serif" font-size="5.5" font-weight="600" fill="#8B6F4E" letter-spacing="0.8">BALM</text>
+  <!-- Snowflake -->
+  <g transform="translate(100, 125)" stroke="#8B6F4E" stroke-width="0.8" opacity="0.6">
+    <line x1="0" y1="-5" x2="0" y2="5"/>
+    <line x1="-4.3" y1="-2.5" x2="4.3" y2="2.5"/>
+    <line x1="-4.3" y1="2.5" x2="4.3" y2="-2.5"/>
+  </g>
+</svg>
