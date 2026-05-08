@@ -124,16 +124,16 @@ ul { list-style: none; }
 .nav__logo {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.35rem;
+  font-size: 1.6rem;
   letter-spacing: 0.02em;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .nav__logo-icon {
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
 }
 
 .nav__links {
