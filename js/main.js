@@ -28,6 +28,17 @@ document.querySelectorAll('.card, .product, .about__text, .about__image, .newsle
   observer.observe(el);
 });
 
+// Watch for Boulevard or other third-party widgets injected into the nav dynamically
+const bookWrapper = document.querySelector('.nav__book-wrapper');
+if (bookWrapper) {
+  new MutationObserver(() => {
+    const fallback = bookWrapper.querySelector('a.btn--nav');
+    if (fallback && bookWrapper.querySelector('blvd-book-button, [data-blvd-book], iframe')) {
+      fallback.style.display = 'none';
+    }
+  }).observe(bookWrapper, { childList: true, subtree: true });
+}
+
 // Newsletter form handler (placeholder — replace with Klaviyo/Mailchimp JS API)
 const form = document.getElementById('signup-form');
 if (form) {

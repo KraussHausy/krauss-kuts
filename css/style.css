@@ -97,6 +97,10 @@ ul { list-style: none; }
 }
 .btn--nav:hover { background: var(--clr-accent); }
 
+.nav__book-wrapper {
+  margin-left: 0.5rem;
+}
+
 /* ===== NAV ===== */
 .nav {
   position: fixed;
@@ -551,6 +555,9 @@ ul { list-style: none; }
   }
   .nav__links.active { display: flex; }
   .nav__toggle { display: flex; }
+
+  .nav__book-wrapper { margin-left: 0; width: 100%; }
+  .nav__book-wrapper .btn--nav { display: block; text-align: center; width: 100%; }
 
   .about__grid { grid-template-columns: 1fr; gap: 2rem; }
   .about__image-placeholder { max-height: 300px; aspect-ratio: 16/9; }
