@@ -285,9 +285,11 @@ ul { list-style: none; }
   pointer-events: none;
   border-radius: 8px;
 }
-.card:hover .card__tooltip {
-  opacity: 1;
-  pointer-events: auto;
+@media (hover: hover) {
+  .card:hover .card__tooltip {
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 .card__tooltip p {
   color: #ccc;
